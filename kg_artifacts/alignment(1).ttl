@@ -1,0 +1,75 @@
+@prefix ex: <http://example.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+ex:Action owl:sameAs <http://www.wikidata.org/entity/Q188473> .
+
+ex:Avatar owl:sameAs <http://www.wikidata.org/entity/Q48460> .
+
+ex:BradPitt owl:sameAs <http://www.wikidata.org/entity/Q35332> .
+
+ex:ChristopherNolan owl:sameAs <http://www.wikidata.org/entity/Q25191> .
+
+ex:CillianMurphy owl:sameAs <http://www.wikidata.org/entity/Q313949> .
+
+ex:Crime owl:sameAs <http://www.wikidata.org/entity/Q959790> .
+
+ex:DenisVilleneuve owl:sameAs <http://www.wikidata.org/entity/Q3772> .
+
+ex:Drama owl:sameAs <http://www.wikidata.org/entity/Q130232> .
+
+ex:Dune owl:sameAs <http://www.wikidata.org/entity/Q20050538> .
+
+ex:FightClub owl:sameAs <http://www.wikidata.org/entity/Q190908> .
+
+ex:ForrestGump owl:sameAs <http://www.wikidata.org/entity/Q134773>,
+        <http://www.wikidata.org/entity/Q552213> .
+
+ex:Gladiator owl:sameAs <http://www.wikidata.org/entity/Q128518> .
+
+ex:GoldenGlobe owl:sameAs <http://www.wikidata.org/entity/Q19021> .
+
+ex:Historical owl:sameAs <http://www.wikidata.org/entity/Q1983062> .
+
+ex:Inception owl:sameAs <http://www.wikidata.org/entity/Q105824503>,
+        <http://www.wikidata.org/entity/Q43361> .
+
+ex:Interstellar owl:sameAs <http://www.wikidata.org/entity/Q13417189> .
+
+ex:JamesCameron owl:sameAs <http://www.wikidata.org/entity/Q42530> .
+
+ex:KeanuReeves owl:sameAs <http://www.wikidata.org/entity/Q43416> .
+
+ex:LaLaLand owl:sameAs <http://www.wikidata.org/entity/Q20859866> .
+
+ex:LeonardoDiCaprio owl:sameAs <http://www.wikidata.org/entity/Q124213457>,
+        <http://www.wikidata.org/entity/Q38111> .
+
+ex:Musical owl:sameAs <http://www.wikidata.org/entity/Q2743> .
+
+ex:Oppenheimer owl:sameAs <http://www.wikidata.org/entity/Q19010330> .
+
+ex:Oscar owl:sameAs <http://www.wikidata.org/entity/Q19020> .
+
+ex:PulpFiction owl:sameAs <http://www.wikidata.org/entity/Q104123> .
+
+ex:RidleyScott owl:sameAs <http://www.wikidata.org/entity/Q2001> .
+
+ex:Romance owl:sameAs <http://www.wikidata.org/entity/Q1054574> .
+
+ex:RyanGosling owl:sameAs <http://www.wikidata.org/entity/Q200505> .
+
+ex:ScienceFiction owl:sameAs <http://www.wikidata.org/entity/Q24925> .
+
+ex:TheDarkKnight owl:sameAs <http://www.wikidata.org/entity/Q163872> .
+
+ex:TheGodfather owl:sameAs <http://www.wikidata.org/entity/Q47703> .
+
+ex:TheMatrix owl:sameAs <http://www.wikidata.org/entity/Q1339> .
+
+ex:Titanic owl:sameAs <http://www.wikidata.org/entity/Q25173>,
+        <http://www.wikidata.org/entity/Q44578> .
+
+ex:TomHanks owl:sameAs <http://www.wikidata.org/entity/Q2263> .
+
+ex:Whiplash owl:sameAs <http://www.wikidata.org/entity/Q182832> .
+

@@ -1,0 +1,16 @@
+@prefix ex: <http://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:Award a rdfs:Class .
+
+ex:AwardCategory a rdfs:Class ;
+    rdfs:subClassOf ex:Concept .
+
+ex:Film a rdfs:Class .
+
+ex:Genre a rdfs:Class .
+
+ex:Organization a rdfs:Class .
+
+ex:Person a rdfs:Class .
+

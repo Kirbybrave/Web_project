@@ -1,0 +1,10 @@
+Expanded KB statistics
+======================
+Triplets: 123022
+Entities: 106462
+Relations: 86
+
+Target requirements:
+- Triplets: 50,000 -- 200,000
+- Entities: 5,000 -- 30,000
+- Relations: 50 -- 200

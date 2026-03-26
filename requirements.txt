@@ -1,0 +1,13 @@
+trafilatura
+spacy
+SPARQLWrapper
+owlready2
+rdflib
+pandas
+numpy
+matplotlib
+scikit-learn
+pykeen
+torch
+requests
+httpx

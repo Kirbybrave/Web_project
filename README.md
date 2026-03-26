@@ -189,9 +189,7 @@ kg_artifacts/expanded_kb_pruned.ttl
 
 ### Screenshot of Demo
 
-<p align="center">
-  <img src="demo.png" width="800">
-</p>
+![RAG Demo](screenshots/demo.png)
 
 ## Notes
 - Some files keep their original export names such as `(1)` because they come from notebook exports.

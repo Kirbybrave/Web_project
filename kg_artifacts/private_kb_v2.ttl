@@ -1,0 +1,121 @@
+@prefix ex: <http://example.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+############################
+######## ONTOLOGY ##########
+############################
+
+ex:Film rdf:type rdfs:Class .
+ex:Person rdf:type rdfs:Class .
+ex:Genre rdf:type rdfs:Class .
+ex:Award rdf:type rdfs:Class .
+ex:AwardCategory rdf:type rdfs:Class .
+ex:Organization rdf:type rdfs:Class .
+
+ex:AwardCategory rdfs:subClassOf ex:Concept .
+ex:Organization rdf:type rdfs:Class .
+
+ex:directedBy rdfs:domain ex:Film ;
+              rdfs:range ex:Person .
+
+ex:actedIn rdfs:domain ex:Person ;
+           rdfs:range ex:Film .
+
+ex:hasGenre rdfs:domain ex:Film ;
+            rdfs:range ex:Genre .
+
+ex:wonAward rdfs:domain ex:Person ;
+            rdfs:range ex:Award .
+
+ex:producedIn rdfs:domain ex:Film ;
+              rdfs:range ex:Organization .
+
+############################
+######## ALIGNMENT #########
+############################
+
+# Films
+ex:Inception owl:sameAs wd:Q43361 .
+ex:Interstellar owl:sameAs wd:Q13417189 .
+ex:TheDarkKnight owl:sameAs wd:Q163872 .
+ex:Titanic owl:sameAs wd:Q44578 .
+ex:Avatar owl:sameAs wd:Q48460 .
+ex:Gladiator owl:sameAs wd:Q128518 .
+ex:TheMatrix owl:sameAs wd:Q1339 .
+ex:ForrestGump owl:sameAs wd:Q134773 .
+ex:TheGodfather owl:sameAs wd:Q47703 .
+ex:PulpFiction owl:sameAs wd:Q104123 .
+ex:LaLaLand owl:sameAs wd:Q20859866 .
+ex:Whiplash owl:sameAs wd:Q182832 .
+ex:Dune owl:sameAs wd:Q20050538 .
+ex:Oppenheimer owl:sameAs wd:Q19010330 .
+ex:FightClub owl:sameAs wd:Q190908 .
+
+# People
+ex:ChristopherNolan owl:sameAs wd:Q25191 .
+ex:LeonardoDiCaprio owl:sameAs wd:Q38111 .
+ex:JamesCameron owl:sameAs wd:Q42530 .
+ex:RidleyScott owl:sameAs wd:Q2001 .
+ex:KeanuReeves owl:sameAs wd:Q43416 .
+ex:TomHanks owl:sameAs wd:Q2263 .
+ex:BradPitt owl:sameAs wd:Q35332 .
+ex:RyanGosling owl:sameAs wd:Q200505 .
+ex:CillianMurphy owl:sameAs wd:Q313949 .
+ex:DenisVilleneuve owl:sameAs wd:Q3772 .
+
+# Genres
+ex:ScienceFiction owl:sameAs wd:Q24925 .
+ex:Action owl:sameAs wd:Q188473 .
+ex:Romance owl:sameAs wd:Q1054574 .
+ex:Drama owl:sameAs wd:Q130232 .
+ex:Crime owl:sameAs wd:Q959790 .
+ex:Historical owl:sameAs wd:Q1983062 .
+ex:Musical owl:sameAs wd:Q2743 .
+
+# Awards
+ex:Oscar owl:sameAs wd:Q19020 .
+ex:GoldenGlobe owl:sameAs wd:Q19021 .
+
+############################
+######## DATA ##############
+############################
+
+ex:Inception rdf:type ex:Film ;
+             ex:directedBy ex:ChristopherNolan ;
+             ex:hasGenre ex:ScienceFiction ;
+             ex:releasedIn "2010"^^xsd:gYear .
+
+ex:Interstellar rdf:type ex:Film ;
+                ex:directedBy ex:ChristopherNolan ;
+                ex:hasGenre ex:ScienceFiction ;
+                ex:releasedIn "2014"^^xsd:gYear .
+
+ex:TheDarkKnight rdf:type ex:Film ;
+                 ex:directedBy ex:ChristopherNolan ;
+                 ex:hasGenre ex:Action ;
+                 ex:releasedIn "2008"^^xsd:gYear .
+
+ex:Titanic rdf:type ex:Film ;
+           ex:directedBy ex:JamesCameron ;
+           ex:hasGenre ex:Romance ;
+           ex:releasedIn "1997"^^xsd:gYear .
+
+ex:LeonardoDiCaprio rdf:type ex:Person ;
+                    ex:actedIn ex:Inception ;
+                    ex:actedIn ex:Titanic ;
+                    ex:wonAward ex:Oscar .
+
+ex:ChristopherNolan rdf:type ex:Person ;
+                    ex:wonAward ex:Oscar .
+
+ex:TomHanks rdf:type ex:Person ;
+            ex:wonAward ex:Oscar ;
+            ex:actedIn ex:ForrestGump .
+
+ex:ForrestGump rdf:type ex:Film ;
+               ex:hasGenre ex:Drama ;
+               ex:releasedIn "1994"^^xsd:gYear .

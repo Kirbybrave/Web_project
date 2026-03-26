@@ -189,6 +189,10 @@ kg_artifacts/expanded_kb_pruned.ttl
 
 ### Screenshot of Demo
 
+<p align="center">
+  <img src="screenshots/Capture d'écran 2026-03-26 094343.png" width="800">
+</p>
+
 ## Notes
 - Some files keep their original export names such as `(1)` because they come from notebook exports.
 - The HTML files are rendered versions of the notebooks and can be used for quick inspection.

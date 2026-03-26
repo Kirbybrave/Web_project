@@ -36,6 +36,7 @@ Web_project-main/
 │   ├── crawler_output.jsonl       # Cleaned crawled documents
 │   └── family.owl.txt             # Family ontology resource
 ├── LICENSE
+├── requirements.txt
 └── README.md
 ```
 

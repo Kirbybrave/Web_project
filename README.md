@@ -2,42 +2,44 @@
 
 Knowledge Graph Construction, Reasoning, Embeddings, and RAG over RDF/SPARQL.
 
-This repository contains the full workflow developed for a Web / Semantic Web project:
+This repository contains a complete Semantic Web pipeline:
 - data acquisition and information extraction
 - knowledge base construction and alignment
 - SWRL reasoning
 - knowledge graph embeddings
 - RAG over an RDF graph with SPARQL generation
 
+---
+
 ## Repository structure
 
 ```text
 Web_project-main/
 ├── Notebook/
-│   ├── Web_td1.ipynb              # Data acquisition + NER
-│   ├── Web_td4(1).ipynb           # KB construction / alignment / expansion
-│   ├── Web_td5_0.ipynb            # SWRL + KGE experiments
-│   ├── Web_TD6(1).ipynb           # RAG over RDF/SPARQL
-│   └── *.html                     # Exported notebook versions
+│   ├── Web_td1.ipynb
+│   ├── Web_td4(1).ipynb
+│   ├── Web_td5_0.ipynb
+│   ├── Web_TD6(1).ipynb
+│   └── *.html
 ├── csv/
-│   └── extracted_knowledge.csv    # Extracted named entities
+│   └── extracted_knowledge.csv
 ├── kg_artifacts/
-│   ├── private_kb_v2.ttl          # Initial private KB
-│   ├── alignment(1).ttl           # Alignment output
-│   ├── ontology(1).ttl            # Ontology file
-│   ├── expanded_kb_pruned.ttl     # Final pruned RDF knowledge graph
-│   └── expanded_kb_stats.txt      # KB statistics
+│   ├── private_kb_v2.ttl
+│   ├── alignment(1).ttl
+│   ├── ontology(1).ttl
+│   ├── expanded_kb_pruned.ttl
+│   └── expanded_kb_stats.txt
 ├── kge/
 │   ├── train_labels.txt
 │   ├── valid_labels.txt
 │   └── test_labels.txt
 ├── src/
-│   ├── Code_Rag.py                # SPARQL-generation RAG pipeline
-│   ├── crawler_output.jsonl       # Cleaned crawled documents
-│   └── family.owl.txt             # Family ontology resource
-├── LICENSE
+│   ├── Code_Rag.py
+│   ├── crawler_output.jsonl
+│   └── family.owl.txt
 ├── requirements.txt
-└── README.md
+├── README.md
+└── LICENSE
 ```
 
 ## Project overview
@@ -135,6 +137,12 @@ Activate it:
 source .venv/bin/activate
 ```
 
+**Hardware requirements**
+- CPU: standard laptop CPU (no GPU required)
+- RAM: 8 GB recommended
+- Storage: ~1–2 GB for data and models
+- OS: Windows / macOS / Linux
+
 ### 3. Install dependencies
 ```bash
 pip install -r requirements.txt
@@ -157,7 +165,7 @@ Then start Ollama locally so that the API is available at:
 http://localhost:11434
 ```
 
-## How to run
+## How to run each module
 
 ### Open the notebooks
 You can run the project notebook by notebook:
@@ -178,6 +186,8 @@ If needed, update the path of `TTL_FILE` inside the script so it points to:
 ```text
 kg_artifacts/expanded_kb_pruned.ttl
 ```
+
+### Screenshot of Demo
 
 ## Notes
 - Some files keep their original export names such as `(1)` because they come from notebook exports.

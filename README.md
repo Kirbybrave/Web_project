@@ -36,6 +36,8 @@ Web_project-main/
 ├── src/
 │   ├── Code_Rag.py
 │   ├── crawler_output.jsonl
+│   ├── screenshots
+│       └── demo.png
 │   └── family.owl.txt
 ├── requirements.txt
 ├── README.md

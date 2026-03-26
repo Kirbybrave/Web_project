@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+ xmlns:owl="http://www.w3.org/2002/07/owl#"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+ xml:base="http://www.owl-ontologies.com/unnamed.owl">
+<owl:Ontology rdf:about="">
+<owl:imports rdf:resource="http://protege.stanford.edu/plugins/owl/protege"/>
+</owl:Ontology>
+<!-- Début des classes et propriétés -->
+<owl:Class rdf:ID="Son">
+  <rdfs:subClassOf>
+    <owl:Class rdf:ID="Child"/>
+  </rdfs:subClassOf>
+  <owl:equivalentClass>
+    <owl:Restriction>
+      <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+      <owl:onProperty>
+        <owl:ObjectProperty rdf:ID="isSonOf"/>
+      </owl:onProperty>
+    </owl:Restriction>
+  </owl:equivalentClass>
+  <owl:disjointWith>
+    <owl:Class rdf:ID="Daughter"/>
+  </owl:disjointWith>
+</owl:Class>
+
+<owl:Class rdf:ID="Person"/>
+<owl:Class rdf:ID="Uncle">
+  <owl:equivalentClass>
+    <owl:Restriction>
+      <owl:onProperty>
+        <owl:ObjectProperty rdf:ID="isBrotherOf"/>
+      </owl:onProperty>
+      <owl:someValuesFrom>
+        <owl:Class rdf:ID="Parent"/>
+      </owl:someValuesFrom>
+    </owl:Restriction>
+  </owl:equivalentClass>
+  <rdfs:subClassOf>
+    <owl:Class rdf:ID="Male"/>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<!-- ... ici toutes les autres classes et propriétés ... -->
+
+<owl:SymmetricProperty rdf:ID="isMarriedWith">
+  <owl:inverseOf rdf:resource="#isMarriedWith"/>
+  <rdfs:domain rdf:resource="#Person"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdfs:range rdf:resource="#Person"/>
+</owl:SymmetricProperty>
+
+<!-- Début des instances -->
+<!-- Début des instances -->
+<Male rdf:ID="Tom">
+    <age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</age>
+    <isSonOf>
+        <Male rdf:ID="Thomas">
+            <age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">40</age>
+            <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French</nationality>
+            <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thomas</name>
+            <isMarriedWith>
+                <Female rdf:ID="Alex">
+                    <isMarriedWith rdf:resource="#Thomas"/>
+                    <age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</age>
+                    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alex</name>
+                </Female>
+            </isMarriedWith>
+            <isFatherOf>
+                <Male rdf:ID="Michael">
+                    <isSonOf rdf:resource="#Thomas"/>
+                    <isSonOf rdf:resource="#Alex"/>
+                    <age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</age>
+                    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael</name>
+                </Male>
+            </isFatherOf>
+            <isSonOf>
+                <Male rdf:ID="Peter">
+                    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peter</name>
+                    <age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">70</age>
+                    <isFatherOf rdf:resource="#Thomas"/>
+                    <isMarriedWith>
+                        <Female rdf:ID="Marie">
+                            <age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">69</age>
+                            <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marie</name>
+                            <isMotherOf>
+                                <Female rdf:ID="Sylvie">
+                                    <isDaughterOf rdf:resource="#Peter"/>
+                                    <isDaughterOf rdf:resource="#Marie"/>
+                                    <age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</age>
+                                    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sylvie</name>
+                                    <isMarriedWith>
+                                        <Male rdf:ID="John">
+                                            <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John</name>
+                                            <isMarriedWith rdf:resource="#Sylvie"/>
+                                            <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italian</nationality>
+                                            <age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">45</age>
+                                        </Male>
+                                    </isMarriedWith>
+                                </Female>
+                            </isMotherOf>
+                            <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French</nationality>
+                            <isMarriedWith rdf:resource="#Peter"/>
+                        </Female>
+                    </isMarriedWith>
+                    <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French</nationality>
+                </Male>
+            </isSonOf>
+        </Male>
+    </isSonOf>
+    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tom</name>
+    <isSonOf rdf:resource="#Alex"/>
+</Male>
+
+<Male rdf:ID="Pedro">
+    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pedro</name>
+    <age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</age>
+    <isSonOf rdf:resource="#John"/>
+</Male>
+
+<Female rdf:ID="Claude">
+    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Claude</name>
+    <age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</age>
+    <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French</nationality>
+    <isDaughterOf rdf:resource="#Sylvie"/>
+</Female>
+
+<Female rdf:ID="Chloé">
+    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chloé</name>
+    <isDaughterOf rdf:resource="#Peter"/>
+    <isDaughterOf rdf:resource="#Marie"/>
+    <age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">18</age>
+</Female>
+
+<Male rdf:ID="Paul">
+    <age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">38</age>
+    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul</name>
+    <isSonOf rdf:resource="#Peter"/>
+</Male>
+
+</rdf:RDF>

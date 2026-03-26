@@ -190,7 +190,7 @@ kg_artifacts/expanded_kb_pruned.ttl
 ### Screenshot of Demo
 
 <p align="center">
-  <img src="screenshots/Capture d'écran 2026-03-26 094343.png" width="800">
+  <img src="demo.png" width="800">
 </p>
 
 ## Notes
